@@ -10,9 +10,7 @@ Source0:	http://celebnamer.celebworld.ws/stuff/mod_xsendfile/mod_xsendfile-%{ver
 # Source0-md5:	aa885ed32cce545404f329fdf507e53b
 URL:		http://celebnamer.celebworld.ws/stuff/mod_xsendfile/
 BuildRequires:	%{apxs}
-BuildRequires:	apache-devel >= 2.0.40
-BuildRequires:	autoconf
-BuildRequires:	automake
+BuildRequires:	apache-devel >= 2.0
 BuildRequires:	rpmbuild(macros) >= 1.268
 Requires:	apache(modules-api) = %apache_modules_api
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
