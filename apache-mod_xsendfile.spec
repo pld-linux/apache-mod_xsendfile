@@ -1,6 +1,7 @@
 %define		mod_name	xsendfile
 %define 	apxs		/usr/sbin/apxs
-Summary:	Apache module: convert character encoding of request URLs
+Summary:	Apache module: processing X-SENDFILE headers
+Summary(pl):	Modu³ Apache'a przetwarzaj±cy nag³ówki X-SENDFILE
 Name:		apache-mod_%{mod_name}
 Version:	0.8
 Release:	0.1
@@ -27,6 +28,16 @@ file specified by that header instead using Apache internals including
 all optimizations like caching-headers and sendfile or mmap if
 configured. It is useful for processing script-output of e.g. PHP,
 Perl or any CGI.
+
+%description -l pl
+mod_xsendfile to ma³y modu³ Apache'a 2 przetwarzaj±cy nag³ówki
+X-SENDFILE zarejestrowane przez oryginaln± procedurê obs³ugi wyj¶cia.
+Kiedy stwierdzi obecno¶æ takiego nag³ówka, anuluje ca³e wyj¶cie i
+zamiast niego wysy³a plik wskazany przez ten nag³ówek przy u¿yciu
+funkcji wewnêtrznych Apache'a wraz ze wszystkimi optymalizacjami,
+takimi jak buforowanie nag³ówków i sendfile/mmap. Modu³ ten jest
+przydatny do przetwarzania wyj¶cia skryptów, np. PHP, Perla czy
+dowolnego CGI.
 
 %prep
 %setup -qc
