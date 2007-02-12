@@ -1,7 +1,7 @@
 %define		mod_name	xsendfile
 %define 	apxs		/usr/sbin/apxs
 Summary:	Apache module: processing X-SENDFILE headers
-Summary(pl):	Modu≥ Apache'a przetwarzaj±cy nag≥Ûwki X-SENDFILE
+Summary(pl.UTF-8):   Modu≈Ç Apache'a przetwarzajƒÖcy nag≈Ç√≥wki X-SENDFILE
 Name:		apache-mod_%{mod_name}
 Version:	0.8
 Release:	0.1
@@ -29,14 +29,14 @@ all optimizations like caching-headers and sendfile or mmap if
 configured. It is useful for processing script-output of e.g. PHP,
 Perl or any CGI.
 
-%description -l pl
-mod_xsendfile to ma≥y modu≥ Apache'a 2 przetwarzaj±cy nag≥Ûwki
-X-SENDFILE zarejestrowane przez oryginaln± procedurÍ obs≥ugi wyj∂cia.
-Kiedy stwierdzi obecno∂Ê takiego nag≥Ûwka, anuluje ca≥e wyj∂cie i
-zamiast niego wysy≥a plik wskazany przez ten nag≥Ûwek przy uøyciu
-funkcji wewnÍtrznych Apache'a wraz ze wszystkimi optymalizacjami,
-takimi jak buforowanie nag≥ÛwkÛw i sendfile/mmap. Modu≥ ten jest
-przydatny do przetwarzania wyj∂cia skryptÛw, np. PHP, Perla czy
+%description -l pl.UTF-8
+mod_xsendfile to ma≈Çy modu≈Ç Apache'a 2 przetwarzajƒÖcy nag≈Ç√≥wki
+X-SENDFILE zarejestrowane przez oryginalnƒÖ procedurƒô obs≈Çugi wyj≈õcia.
+Kiedy stwierdzi obecno≈õƒá takiego nag≈Ç√≥wka, anuluje ca≈Çe wyj≈õcie i
+zamiast niego wysy≈Ça plik wskazany przez ten nag≈Ç√≥wek przy u≈ºyciu
+funkcji wewnƒôtrznych Apache'a wraz ze wszystkimi optymalizacjami,
+takimi jak buforowanie nag≈Ç√≥wk√≥w i sendfile/mmap. Modu≈Ç ten jest
+przydatny do przetwarzania wyj≈õcia skrypt√≥w, np. PHP, Perla czy
 dowolnego CGI.
 
 %prep
