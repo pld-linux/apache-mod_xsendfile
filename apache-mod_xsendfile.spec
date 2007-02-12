@@ -1,7 +1,7 @@
 %define		mod_name	xsendfile
 %define 	apxs		/usr/sbin/apxs
 Summary:	Apache module: processing X-SENDFILE headers
-Summary(pl.UTF-8):   Moduł Apache'a przetwarzający nagłówki X-SENDFILE
+Summary(pl.UTF-8):	Moduł Apache'a przetwarzający nagłówki X-SENDFILE
 Name:		apache-mod_%{mod_name}
 Version:	0.8
 Release:	0.1
