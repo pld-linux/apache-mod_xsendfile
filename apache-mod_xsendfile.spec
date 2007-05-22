@@ -3,13 +3,13 @@
 Summary:	Apache module: processing X-SENDFILE headers
 Summary(pl.UTF-8):	Moduł Apache'a przetwarzający nagłówki X-SENDFILE
 Name:		apache-mod_%{mod_name}
-Version:	0.8
-Release:	0.1
+Version:	0.9
+Release:	1
 License:	Apache 2.0
 Group:		Networking/Daemons
-Source0:	http://celebnamer.celebworld.ws/stuff/mod_xsendfile/mod_xsendfile-%{version}.tar.gz
-# Source0-md5:	aa885ed32cce545404f329fdf507e53b
-URL:		http://celebnamer.celebworld.ws/stuff/mod_xsendfile/
+Source0:	http://tn123.ath.cx/mod_xsendfile/mod_xsendfile-%{version}.tar.gz
+# Source0-md5:	a7d22d4027386929c7d69c8f2b050c96
+URL:		http://tn123.ath.cx/mod_xsendfile/
 BuildRequires:	%{apxs}
 BuildRequires:	apache-devel >= 2.0
 BuildRequires:	rpmbuild(macros) >= 1.268
@@ -40,7 +40,7 @@ przydatny do przetwarzania wyjścia skryptów, np. PHP, Perla czy
 dowolnego CGI.
 
 %prep
-%setup -qc
+%setup -q -n mod_xsendfile-%{version}
 
 %build
 %{apxs} -c mod_%{mod_name}.c -o mod_%{mod_name}.la
@@ -48,7 +48,6 @@ dowolnego CGI.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_pkglibdir},%{_sysconfdir}/httpd.conf}
-
 install .libs/mod_%{mod_name}.so $RPM_BUILD_ROOT%{_pkglibdir}
 echo 'LoadModule %{mod_name}_module modules/mod_%{mod_name}.so' > \
     $RPM_BUILD_ROOT%{_sysconfdir}/httpd.conf/90_mod_%{mod_name}.conf
@@ -66,5 +65,6 @@ fi
 
 %files
 %defattr(644,root,root,755)
+%doc Readme.html
 %attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/httpd.conf/*_mod_%{mod_name}.conf
 %attr(755,root,root) %{_pkglibdir}/*.so
