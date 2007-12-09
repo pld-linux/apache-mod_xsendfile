@@ -10,7 +10,7 @@ Group:		Networking/Daemons
 Source0:	http://tn123.ath.cx/mod_xsendfile/mod_xsendfile-%{version}.tar.gz
 # Source0-md5:	a7d22d4027386929c7d69c8f2b050c96
 URL:		http://tn123.ath.cx/mod_xsendfile/
-BuildRequires:	apache-apxs >= 2.0
+BuildRequires:	%{apxs}
 BuildRequires:	apache-devel >= 2.0
 BuildRequires:	rpmbuild(macros) >= 1.268
 Requires:	apache(modules-api) = %apache_modules_api
