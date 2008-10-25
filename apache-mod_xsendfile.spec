@@ -6,7 +6,7 @@ Name:		apache-mod_%{mod_name}
 Version:	0.9
 Release:	1
 License:	Apache 2.0
-Group:		Networking/Daemons
+Group:		Networking/Daemons/HTTP
 Source0:	http://tn123.ath.cx/mod_xsendfile/mod_xsendfile-%{version}.tar.gz
 # Source0-md5:	a7d22d4027386929c7d69c8f2b050c96
 URL:		http://tn123.ath.cx/mod_xsendfile/
