@@ -3,13 +3,13 @@
 Summary:	Apache module: processing X-SENDFILE headers
 Summary(pl.UTF-8):	Moduł Apache'a przetwarzający nagłówki X-SENDFILE
 Name:		apache-mod_%{mod_name}
-Version:	0.9
+Version:	0.12
 Release:	1
-License:	Apache 2.0
+License:	Apache v2.0
 Group:		Networking/Daemons/HTTP
-Source0:	http://tn123.ath.cx/mod_xsendfile/mod_xsendfile-%{version}.tar.gz
-# Source0-md5:	a7d22d4027386929c7d69c8f2b050c96
-URL:		http://tn123.ath.cx/mod_xsendfile/
+Source0:	http://tn123.org/mod_xsendfile/mod_xsendfile-%{version}.tar.bz2
+# Source0-md5:	4b83b0e1a0c043c4e76ee99685c35110
+URL:		https://tn123.org/mod_xsendfile/
 BuildRequires:	%{apxs}
 BuildRequires:	apache-devel >= 2.0
 BuildRequires:	rpmbuild(macros) >= 1.268
@@ -64,6 +64,6 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc Readme.html
+%doc docs/Readme.html
 %attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*_mod_%{mod_name}.conf
 %attr(755,root,root) %{_pkglibdir}/*.so
