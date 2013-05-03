@@ -4,7 +4,7 @@ Summary:	Apache module: processing X-SENDFILE headers
 Summary(pl.UTF-8):	Moduł Apache'a przetwarzający nagłówki X-SENDFILE
 Name:		apache-mod_%{mod_name}
 Version:	0.12
-Release:	1
+Release:	2
 License:	Apache v2.0
 Group:		Networking/Daemons/HTTP
 Source0:	http://tn123.org/mod_xsendfile/mod_xsendfile-%{version}.tar.bz2
